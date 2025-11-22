@@ -19,7 +19,7 @@
 
 typedef struct {
         
-        long type;
+        long type; //per primo e obbligatorio con mailbox
         char stringa[STRING_MAX_DIM];
         int array[INT_MAX_DIM];
         int var;
