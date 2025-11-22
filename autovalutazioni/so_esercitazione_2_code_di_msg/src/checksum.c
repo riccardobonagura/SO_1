@@ -20,6 +20,7 @@ void checksum(int queue_filter_checksum, int queue_checksum_visual){
                 printf("[checksum] Ricevo dal processo Filter...\n");
 
                 ret = msgrcv(queue_filter_checksum, &mess, sizeof(message) - sizeof(long), 0, IPC_NOWAIT);
+                //se ultimo è 0 è default bloccante
                 if(ret<0) {
                         if (errno == ENOMSG){
                                 printf("Non ci sono più messaggi da ricevere dal processo filter...exit!\n");
